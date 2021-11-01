@@ -19,6 +19,12 @@ void	parse_res(t_all *all)
 
 	i = 1;
 	temp = ft_split(ft_strstr(all->map.file, "R "), '\n');
+	if (!temp)
+	{
+		all->map.res_x = 720;
+		all->map.res_y = 480;
+		return ;
+	}
 	i = loop_ft_is(ft_isspace, i, temp[0]);
 	if (!ft_isdigit(temp[0][i]))
 		ft_close(all, 3);
@@ -89,7 +95,7 @@ void	parse_colors(t_all *all, char *needle, int *color)
 		ft_close(all, 4);
 	}
 	i = parse_colors_loop(all, temp, color);
-	if (ft_strlen(temp[0]) > i)
+	if ((int)ft_strlen(temp[0]) > i)
 	{
 		ft_freearr(temp);
 		ft_close(all, 4);

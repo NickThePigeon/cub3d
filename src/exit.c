@@ -18,6 +18,7 @@ int	ft_close(t_all *all, int err)
 	free_on_exit(all, err);
 	if (err > 11)
 		mlx_destroy_window(all->img.mlx, all->img.mlx_win);
+	system("leaks cub3D");
 	exit(0);
 	return (0);
 }

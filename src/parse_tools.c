@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:15:08 by nicky         #+#    #+#                 */
-/*   Updated: 2021/06/18 14:06:42 by nicky         ########   odam.nl         */
+/*   Updated: 2021/11/03 15:55:51 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,14 @@ void	check_file(t_all *all)
 	while (array[i])
 		i++;
 	ft_freearr(array);
-	if (i == (all->map.map_y + 8))
-		ft_close(all, 6);
+	if (all->map.res_y == 481)
+	{
+		if (i == (all->map.map_y + 7))
+			ft_close(all, 6);
+	}
+	else
+	{
+		if (i == (all->map.map_y + 8))
+			ft_close(all, 6);
+	}
 }

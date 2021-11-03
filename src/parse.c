@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:21:10 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/31 16:24:55 by nicky         ########   odam.nl         */
+/*   Updated: 2021/11/03 16:14:22 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	parse_file(char *filename, t_all *all)
 	convert_color(all);
 	get_map_axes(all);
 	check_map_vars(all);
-	check_valid_map(all);
 	find_map_pos(all);
+	check_valid_map(all);
 	check_file(all);
 }

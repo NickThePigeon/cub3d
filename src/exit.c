@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:06:36 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/03 13:49:06 by nduijf        ########   odam.nl         */
+/*   Updated: 2021/11/03 16:19:43 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ void	free_on_exit(t_all *all, int err)
 void	error_strings(int err)
 {
 	if (err == 0)
-		printf(RED "Error\nNo .cub extension\n" RESET);
+		printf(RED "Error\nFile doesn't have .cub extension\n" RESET);
 	if (err == 1)
 		printf(RED "Error\nFile doesn't exist\n" RESET);
 	if (err == 2)
-		printf(RED "Error\nCan't find texture path\n" RESET);
+		printf(RED "Error\nTexture path not valid\n" RESET);
 	if (err == 3)
 		printf(RED "Error\nResolution line not valid\n" RESET);
 	if (err == 4)
@@ -70,6 +70,8 @@ void	error_strings_2(int err)
 {
 	if (err == 10)
 		printf(RED "Error\nNo spawn position\n" RESET);
+	if (err == 11)
+		printf(RED "Error\nEpstein didn't kill himself\n" RESET);
 	if (err == 12)
 		printf(RED "Error\nXPM File doesn't exist\n" RESET);
 	if (err > 50)

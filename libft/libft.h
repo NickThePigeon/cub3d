@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 16:11:36 by nicky         #+#    #+#                 */
-/*   Updated: 2021/06/22 16:14:11 by nduijf        ########   odam.nl         */
+/*   Updated: 2021/11/03 14:29:27 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int					loop_ft_is(int (*func)(), int i, char *str);
 int					ft_memcmp(const void *str1, const void *str2, size_t n);
 int					ft_arrlen(char **array);
 size_t				ft_strlen(const char *str);
+int					ft_strlend(const char *str, char c);
 void				ft_strcpy(char *dst, const char *src);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);

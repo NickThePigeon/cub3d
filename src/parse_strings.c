@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:17:55 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/31 16:35:27 by nicky         ########   odam.nl         */
+/*   Updated: 2021/11/03 15:57:54 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	parse_res(t_all *all)
 	if (!temp)
 	{
 		all->map.res_x = 720;
-		all->map.res_y = 480;
+		all->map.res_y = 481;
 		return ;
 	}
 	i = loop_ft_is(ft_isspace, i, temp[0]);
@@ -34,6 +34,10 @@ void	parse_res(t_all *all)
 	if (!ft_isdigit(temp[0][i]))
 		ft_close(all, 3);
 	all->map.res_y = ft_atoi(&temp[0][i]);
+	i = loop_ft_is(ft_isdigit, i, temp[0]);
+	i = loop_ft_is(ft_isspace, i, temp[0]);
+	if (i < (int)ft_strlen(temp[0]))
+		ft_close(all, 3);
 	ft_freearr(temp);
 }
 
@@ -54,6 +58,10 @@ char	*parse_path(t_all *all, char *needle)
 	while (!ft_isspace(temp[i + len]))
 		len++;
 	ret = ft_strduplen(&temp[i], len);
+	while (ft_isspace(temp[i + len]))
+		i++;
+	if (temp[i + len - 1] != '\n')
+		ft_close(all, 2);
 	return (ret);
 }
 

@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:19:36 by nicky         #+#    #+#                 */
-/*   Updated: 2021/06/17 18:22:59 by nicky         ########   odam.nl         */
+/*   Updated: 2021/11/03 16:21:34 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	check_map_vars(t_all *all)
 		|| !all->map.we || !all->map.ea || !all->map.map
 		|| !all->map.fl_color || !all->map.cl_color)
 	{
-		ft_close(all, 2);
+		ft_close(all, 7);
 	}
 }
 
@@ -72,7 +72,7 @@ void	check_valid_map(t_all *all)
 		while (j < len - 1)
 		{
 			if (notmap_func(all->map.map, i, j))
-				ft_close(all, 7);
+				ft_close(all, 8);
 			j++;
 		}
 		i++;

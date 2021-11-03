@@ -1,13 +1,11 @@
-R 720         480
 
 NO textures/brick.xpm
 SO textures/blue.xpm
-WE textures/banner.xpm
-EA textures/hitler.xpm
+WE textures/banner.xpm    
+EA textures/hitler.xpm				
 
-F 112,112,112
+F 112,112,112		
 C 107,0,213
-
 
         111111111111111111
         1000000000110000011111111

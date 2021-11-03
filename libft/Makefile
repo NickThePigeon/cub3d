@@ -6,7 +6,7 @@
 #    By: nduijf <nduijf@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/24 11:56:49 by nduijf        #+#    #+#                  #
-#    Updated: 2021/10/12 16:28:34 by nduijf        ########   odam.nl          #
+#    Updated: 2021/11/03 14:28:31 by nduijf        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRCS 		=	ft_bzero.c		\
 				ft_namecheck.c	\
 				ft_strduplen.c	\
 				ft_arrlen.c		\
+				ft_strlend.c	\
 				ft_strjoin_free_s1.c \
 
 

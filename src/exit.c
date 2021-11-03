@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:06:36 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/31 16:22:08 by nicky         ########   odam.nl         */
+/*   Updated: 2021/11/03 13:49:06 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_close(t_all *all, int err)
 	free_on_exit(all, err);
 	if (err > 11)
 		mlx_destroy_window(all->img.mlx, all->img.mlx_win);
-	system("leaks cub3D");
 	exit(0);
 	return (0);
 }

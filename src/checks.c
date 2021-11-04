@@ -6,22 +6,11 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:19:36 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/03 16:21:34 by nduijf        ########   odam.nl         */
+/*   Updated: 2021/11/04 12:20:25 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-void	check_map_vars(t_all *all)
-{
-	if (!all->map.res_y || !all->map.res_y || !all->map.map_y
-		|| !all->map.map_x || !all->map.no || !all->map.so
-		|| !all->map.we || !all->map.ea || !all->map.map
-		|| !all->map.fl_color || !all->map.cl_color)
-	{
-		ft_close(all, 7);
-	}
-}
 
 void	convert_color(t_all *all)
 {

@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 16:08:42 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/31 16:36:30 by nicky         ########   odam.nl         */
+/*   Updated: 2021/11/04 11:43:57 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,6 @@ int		compare_set(char c, char *valid);
 int		zero_or_one(char *str);
 void	check_file(t_all *all);
 
-void	check_map_vars(t_all *all);
 void	convert_color(t_all *all);
 
 void	init_raycast(t_all *all, int i);

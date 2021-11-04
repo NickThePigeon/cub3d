@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:21:10 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/03 16:14:22 by nduijf        ########   odam.nl         */
+/*   Updated: 2021/11/04 11:45:37 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	get_map_axes(t_all *all)
 
 void	parse_file(char *filename, t_all *all)
 {
-	if (ft_strncmp(filename + (ft_strlen(filename) - 4), ".cub", 3) != 0)
+	if (ft_strncmp(filename + (ft_strlen(filename) - 4), ".cub", 4) != 0)
 		ft_close(all, 0);
 	if (!read_to_eof(filename, &all->map.file))
 		ft_close(all, 1);
@@ -47,8 +47,7 @@ void	parse_file(char *filename, t_all *all)
 	parse_map(all);
 	convert_color(all);
 	get_map_axes(all);
-	check_map_vars(all);
-	find_map_pos(all);
 	check_valid_map(all);
+	find_map_pos(all);
 	check_file(all);
 }

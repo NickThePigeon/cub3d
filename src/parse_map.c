@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/01 14:07:09 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/03 16:02:12 by nduijf        ########   odam.nl         */
+/*   Updated: 2021/11/04 11:52:41 by nduijf        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	parse_map(t_all *all)
 			i--;
 		}
 	}
+	if (len < 3)
+		ft_close(all, 8);
 	fill_map(all, len, i, array);
 	ft_freearr(array);
 }

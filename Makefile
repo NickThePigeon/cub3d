@@ -36,7 +36,7 @@ MLX				= libmlx.dylib
 all:	$(NAME)
 
 $(NAME): $(MLX) $(LIBFT) $(OBJS)
-	${CC} ${CFLAGS} -o ${NAME} ${MLX} ${OBJS} ${LIBS} ${LIBFT}
+	${CC} ${CFLAGS} -o ${NAME} ${MLX} ${OBJS} ${LIBFT}
 
 $(LIBFT):
 	make -C libft

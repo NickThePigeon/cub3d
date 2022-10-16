@@ -1,8 +1,8 @@
 R 1080 720
 NO textures/brick.xpm
 SO textures/blue.xpm
-WE textures/banner.xpm    
-EA textures/hitler.xpm				
+WE textures/wood.xpm    
+EA textures/grey.xpm				
 
 F 112,112,112		
 C 107,0,213

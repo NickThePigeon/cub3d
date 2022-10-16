@@ -21,3 +21,5 @@ mentioned earlier.
 To compile the program run Make
 
 To run the program "./cub3d <path_to_.cub_file>"
+
+Control the program with w,s,a,d and the arrow buttons.

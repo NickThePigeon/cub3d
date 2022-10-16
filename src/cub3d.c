@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 16:08:27 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:59:45 by nduijf        ########   odam.nl         */
+/*   Updated: 2022/10/16 16:06:36 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_init_img(t_all *all)
 {
 	all->img.mlx = mlx_init();
-	check_screen_size(all);
+	// check_screen_size(all); // Deprecated in minilibx lib
 	all->img.mlx_win = mlx_new_window(all->img.mlx, all->map.res_x,
 			all->map.res_y, "cub3D");
 	all->img.img = mlx_new_image(all->img.mlx, all->map.res_x, all->map.res_y);

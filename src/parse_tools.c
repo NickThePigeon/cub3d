@@ -6,34 +6,34 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:15:08 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/03 15:55:51 by nduijf        ########   odam.nl         */
+/*   Updated: 2022/10/16 15:44:16 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	check_screen_size(t_all *all)
-{
-	int	x;
-	int	y;
-	int	print;
+// void	check_screen_size(t_all *all)
+// {
+// 	int	x;
+// 	int	y;
+// 	int	print;
 
-	print = 0;
-	mlx_get_screen_size(all->img.mlx, &x, &y);
-	if (all->map.res_x > x)
-	{
-		all->map.res_x = x;
-		print = 1;
-	}
-	if (all->map.res_y > y)
-	{
-		all->map.res_y = y;
-		print = 1;
-	}
-	if (print == 1)
-		printf(GREEN
-			"File Resolution to big, adjusted to screen resolution\n" RESET);
-}
+// 	print = 0;
+// 	mlx_get_screen_size(all->img.mlx, &x, &y);
+// 	if (all->map.res_x > x)
+// 	{
+// 		all->map.res_x = x;
+// 		print = 1;
+// 	}
+// 	if (all->map.res_y > y)
+// 	{
+// 		all->map.res_y = y;
+// 		print = 1;
+// 	}
+// 	if (print == 1)
+// 		printf(GREEN
+// 			"File Resolution to big, adjusted to screen resolution\n" RESET);
+// }
 
 int	zero_or_one(char *str)
 {

@@ -6,7 +6,7 @@
 #    By: nicky <nicky@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/18 16:22:27 by nicky         #+#    #+#                  #
-#    Updated: 2021/10/13 18:02:46 by nduijf        ########   odam.nl          #
+#    Updated: 2022/10/16 12:51:19 by nicky         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,25 +29,26 @@ OBJS			= $(SRCS:.c=.o)
 HEADER_FILE		= cub3d.h
 CFLAGS			= -Wall -Wextra -Werror -I./includes/
 LIBFT			= libft/libft.a
-LIBS			= -Lmlx -framework OpenGL -framework AppKit -lm
+LIBS			= -LMLX42 -framework OpenGL -framework AppKit -lm
 CC				= gcc
-MLX				= libmlx.dylib
+MLX				= libmlx42.a
+# MLX				= libmlx.dylib
 
 all:	$(NAME)
 
-$(NAME): $(MLX) $(LIBFT) $(OBJS)
-	${CC} ${CFLAGS} -o ${NAME} ${MLX} ${OBJS} ${LIBFT}
+$(NAME): $(LIBFT) $(OBJS) $(MLX)
+	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${LIBFT} ${MLX}
 
 $(LIBFT):
 	make -C libft
 
 $(MLX):
-	@$(MAKE) -C mlx
-	@mv mlx/$(MLX) .
+	@$(MAKE) -C MLX42
+	@mv MLX42/$(MLX) .
 
 clean:
 	make clean -C libft
-	@$(MAKE) -C mlx clean
+	@$(MAKE) -C MLX42 clean
 	rm -f $(OBJS)
 
 fclean:	clean

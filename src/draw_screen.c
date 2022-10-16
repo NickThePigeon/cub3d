@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:11:35 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/13 13:43:28 by nduijf        ########   odam.nl         */
+/*   Updated: 2022/10/16 13:06:57 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	draw_wall(t_all *all)
 		put_tex(wall_img, all, i);
 		i++;
 	}
-	mlx_put_image_to_window(all->img.mlx, all->img.mlx_win, all->img.img, 0, 0);
+	// mlx_put_image_to_window(all->img.mlx, all->img.mlx_win, all->img.img, 0, 0);
+	mlx_image_to_window(all->img.mlx_ptr, all->img.img_ptr, 0, 0);
 }
 
 void	draw_dispay(t_all *all)
@@ -44,7 +45,8 @@ void	draw_dispay(t_all *all)
 void	draw_screen(t_all *all)
 {
 	draw_dispay(all);
-	mlx_hook(all->img.mlx_win, KEY_PRESS, 0, key_pressed, all);
-	mlx_hook(all->img.mlx_win, DESTROY_NOTIFY, 0, ft_close, all);
-	mlx_loop(all->img.mlx);
+	// mlx_hook(all->img.mlx_win, KEY_PRESS, 0, key_pressed, all);
+	// mlx_hook(all->img.mlx_win, DESTROY_NOTIFY, 0, ft_close, all);
+	// mlx_loop(all->img.mlx);
+	mlx_loop(all->img.mlx_ptr);
 }

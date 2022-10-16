@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/18 15:42:45 by nicky         #+#    #+#                 */
-/*   Updated: 2021/06/18 16:32:22 by nicky         ########   odam.nl         */
+/*   Updated: 2022/10/16 15:31:16 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ void	put_tex(t_img wall_img, t_all *all, int i)
 				* wall_img.line_length + (int)all->ray.x_tex % wall_img.width
 				* (wall_img.bits_per_pixel / 8));
 		all->img.color = *(unsigned int *)dst;
-		my_mlx_pixel_put(all, i, y_start);
+		mlx_put_pixel(all->img.img_ptr, i, y_start, all->img.color);
+		// my_mlx_pixel_put(all, i, y_start);
 		all->ray.y_tex += all->ray.y_tex_step;
 		y_start++;
 	}

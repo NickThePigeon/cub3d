@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 16:08:42 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/04 11:43:57 by nduijf        ########   odam.nl         */
+/*   Updated: 2022/10/16 12:57:51 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # define	KEY_PRESS 2
 
 # include "../libft/libft.h"
-# include	"../mlx/mlx.h"
+# include	"../MLX42/include/MLX42/MLX42.h"
 # include	<stdio.h>
 # include	<math.h>
 # include	<fcntl.h>
@@ -36,6 +36,8 @@
 
 typedef struct s_img
 {
+	mlx_t		*mlx_ptr;
+	mlx_image_t *img_ptr;
 	void		*mlx;
 	void		*mlx_win;
 	void		*img;

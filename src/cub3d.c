@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/18 16:08:27 by nicky         #+#    #+#                 */
-/*   Updated: 2021/10/13 17:59:45 by nduijf        ########   odam.nl         */
+/*   Updated: 2022/10/16 15:36:19 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 void	ft_init_img(t_all *all)
 {
-	all->img.mlx = mlx_init();
-	check_screen_size(all);
-	all->img.mlx_win = mlx_new_window(all->img.mlx, all->map.res_x,
-			all->map.res_y, "cub3D");
-	all->img.img = mlx_new_image(all->img.mlx, all->map.res_x, all->map.res_y);
-	all->img.addr = mlx_get_data_addr(all->img.img, &all->img.bits_per_pixel,
-			&all->img.line_length, &all->img.endian);
-	send_textures(all);
+	all->img.mlx_ptr = mlx_init(all->map.res_x, all->map.res_y, "Cub3d", true);
+	// check_screen_size(all);
+	all->img.img_ptr = mlx_new_image(all->img.mlx_ptr, all->map.res_x, all->map.res_y);
+	ft_memset(all->img.img_ptr->pixels, 255, (all->map.res_x * all->map.res_y * sizeof(int)));
+	// all->img.mlx_win = mlx_new_window(all->img.mlx, all->map.res_x,
+	// 		all->map.res_y, "cub3D");
+	// all->img.img = mlx_new_image(all->img.mlx, all->map.res_x, all->map.res_y);
+	// all->img.addr = mlx_get_data_addr(all->img.img, &all->img.bits_per_pixel,
+	// 		&all->img.line_length, &all->img.endian);
+	mlx_image_to_window(all->img.mlx_ptr, all->img.img_ptr, 0, 0);
+	// send_textures(all);
 	spawn_pos(all);
 	draw_screen(all);
 }

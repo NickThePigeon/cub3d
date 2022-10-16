@@ -6,7 +6,7 @@
 /*   By: nicky <nicky@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/06/17 10:06:36 by nicky         #+#    #+#                 */
-/*   Updated: 2021/11/03 16:19:43 by nduijf        ########   odam.nl         */
+/*   Updated: 2022/10/16 13:04:18 by nicky         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	ft_close(t_all *all, int err)
 	error_strings(err);
 	free_on_exit(all, err);
 	if (err > 11)
-		mlx_destroy_window(all->img.mlx, all->img.mlx_win);
+		mlx_terminate(all->img.mlx_ptr);
+		// mlx_destroy_window(all->img.mlx, all->img.mlx_win);
 	exit(0);
 	return (0);
 }

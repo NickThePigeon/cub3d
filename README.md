@@ -7,16 +7,18 @@ Program name cub3D
 - Makefile all, clean, fclean, re, bonus
 - Arguments a map in format *.cub
 - External functs.
-	• open, close, read, write,
-	• printf, malloc, free, perror,
+	• open, close, read, write
+        • printf, malloc, free, perror
 	• strerror, exit
 	• All functions of the math lib
 	• All functions of the MinilibX
 
 -------------- Description ------------------------
+
 You must create a “realistic” 3D graphical
 representation of the inside of a maze from a
-first-person perspective. You have to create this
+first-person perspective.
+You have to create this
 representation using the Ray-Casting principles
 mentioned earlier.
 

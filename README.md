@@ -1,3 +1,5 @@
+![alt text](https://github.com/NickThePigeon/cub3d/blob/master/preview.png?raw=true)
+
 This is a 42 project to make you own raycaster in C.
 
 Program name cub3D
